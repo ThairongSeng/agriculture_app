@@ -23,9 +23,6 @@ class _HomePageState extends State<HomePage> {
       drawer: const Drawer(),
       appBar: AppBar(
         centerTitle: false,
-    // title: ListTile(
-    // title: Text("Hi Wilson"),
-    // subtitle: Text("Enjoy your services"),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

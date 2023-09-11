@@ -82,7 +82,8 @@ class ProductCart extends StatelessWidget {
                         ),
                       )
                     ],
-                  )
+                  ),
+
                 ],
               ),
             )
