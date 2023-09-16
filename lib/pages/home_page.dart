@@ -20,7 +20,89 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: const Text(
+                "Thairong Seng",
+              ),
+              accountEmail: const Text("thairongseng@gmail.com"),
+              currentAccountPicture: CircleAvatar(
+                child: ClipOval(
+                  child: Image.network(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPfO37MK81JIyR1ptwqr_vYO3w4VR-iC2wqQ&usqp=CAU",
+                    width: 90,
+                    height: 90,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              decoration: const BoxDecoration(
+                  color: Colors.blue,
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSff8JL9ALjQrQ11mS8MNLOGgyOXjRTJEckCA&usqp=CAU",
+                    ),
+                    fit: BoxFit.cover,
+                  )),
+            ),
+            ListTile(
+              leading: const Icon(Icons.favorite),
+              title: const Text("Favorites"),
+              onTap: (){},
+            ),
+            ListTile(
+              leading: const Icon(Icons.people),
+              title: const Text("Friends"),
+              onTap: (){},
+            ),
+            ListTile(
+              leading: const Icon(Icons.share),
+              title: const Text("Share"),
+              onTap: (){},
+            ),
+            ListTile(
+              leading: const Icon(Icons.notifications),
+              title: const Text("Request"),
+              onTap: (){},
+              trailing: ClipOval(
+                child: Container(
+                  color: Colors.red,
+                  width: 20,
+                  height: 20,
+                  child: const Center(
+                    child: Text(
+                      '8',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text("Settings"),
+              onTap: (){},
+            ),
+            ListTile(
+              leading: const Icon(Icons.description),
+              title: const Text("Policies"),
+              onTap: (){},
+            ),
+            ListTile(
+              leading: const Icon(Icons.exit_to_app),
+              title: const Text("Exit"),
+              onTap: (){},
+            )
+          ],
+        ),
+      ),
       appBar: AppBar(
         centerTitle: false,
         title: Column(
